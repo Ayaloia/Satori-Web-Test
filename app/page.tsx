@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import {useRef} from "react";
 import {motion, useScroll, useSpring, useTransform} from "framer-motion";
+import GalleryPicture from "@/app/GalleryPicture";
 
 export default function Home() {
     const ref = useRef(null)
@@ -132,10 +133,15 @@ export default function Home() {
                         </motion.figure>
                     </section>
 
-                    <section className="h-[50vh] w-full bg-gray-300 shadow-lg rounded-2xl p-4 space-y-3">
+                    <section className="h-fit w-full bg-gray-300 shadow-lg rounded-2xl p-4 space-y-3">
                         <h2 className="text-5xl font-semibold">画廊</h2>
-                        <div>
-
+                        {/*breakpoint arbitrary values seems must be sorted*/}
+                        <div className="grid min-[1680px]:grid-cols-[repeat(4,_400px)] xl:grid-cols-[repeat(3,_400px)] min-[900px]:grid-cols-[repeat(2,_400px)] grid-cols-[minmax(0,_400px)] justify-evenly w-full h-fit gap-6">
+                            <GalleryPicture src={"/satoriGallery/71d2fd04e95dbeb7.jpg"} alt={"satori"} height={2048} width={1692}/>
+                            <GalleryPicture src={"/satoriGallery/illust_58204212_20190215_214148.jpg"} alt={"satori"} height={542} width={900}/>
+                            <GalleryPicture src={"/satoriGallery/99266380_p0.png"} alt={"satori"} height={1637} width={1158}/>
+                            <GalleryPicture src={"/satoriGallery/illust_56906181_20190215_214152.jpg"} alt={"satori"} height={1638} width={1158}/>
+                            <GalleryPicture src={"/satoriGallery/-555ba652bbc2f764.jpg"} alt={"satori"} height={3196} width={2408}/>
                         </div>
                     </section>
                 </div>
@@ -143,3 +149,4 @@ export default function Home() {
         </main>
     )
 }
+//
