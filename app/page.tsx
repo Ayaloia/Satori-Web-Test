@@ -15,18 +15,6 @@ export default function Home() {
                         <div>
                             <GenerateGallery GetGalleryImages={GetSatoriGallery}/>
                         </div>
-                        {/*breakpoint arbitrary values seems must be sorted*/}
-                        {/*<Gallery>*/}
-                        {/*    <GalleryPicture src={"/satoriGallery/71d2fd04e95dbeb7.jpg"} alt={"satori"} width={1692}*/}
-                        {/*                    height={2048}/>*/}
-                        {/*    <GalleryPicture src={"/satoriGallery/55180e9719e99a1c.jpg"} alt={"satori"} width={1677}*/}
-                        {/*                    height={2048}/>*/}
-                        {/*    <GalleryPicture src={"/satoriGallery/illust_58204212_20190215_214148.jpg"} alt={"satori"} width={900}*/}
-                        {/*                    height={542}/>*/}
-                        {/*    <GalleryPicture src={"/satoriGallery/99266380_p0.png"} alt={"satori"} width={1158}*/}
-                        {/*                    height={1637}/>*/}
-                        {/*</Gallery>*/}
-
                     </section>
                 </div>
             </main>

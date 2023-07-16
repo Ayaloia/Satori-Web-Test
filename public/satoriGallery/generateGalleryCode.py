@@ -10,7 +10,7 @@ def main():
         f.write(f"export function {functionName}() {{\n")
         f.write("\treturn [\n")
         for file in files:
-            if file.endswith((".jpg", ".png", ".gif", ".jpeg")):
+            if file.endswith((".jpg", ".png", ".gif", ".jpeg", ".webp")):
                     f.write(f'\t\t"{os.path.join(path, file)}",\n')
         f.write("\t];\n")
         f.write("}\n")

@@ -1,5 +1,5 @@
 "use client";
-import {useRef, useState} from "react";
+import {useRef} from "react";
 import {motion, useScroll, useSpring, useTransform} from "framer-motion";
 import Image from 'next/image'
 import {useMouseHovered} from "react-use";
@@ -7,7 +7,6 @@ import {useMouseHovered} from "react-use";
 export function SkewedCard({children, className, rotateMultiple = 10}: { children: React.ReactNode, className?: string | undefined , rotateMultiple?: number}) {
     const ref = useRef(null)
     const {elX, elY, elW, elH} = useMouseHovered(ref, {whenHovered: true})
-    console.log(elX, elY, elW, elH)
     return (
         // 参考了 GitHub 官网的实现，不过这里重复用了 while/when Hover，可能会有性能问题
         <motion.div ref={ref} className={`w-full h-full ${className}`} initial={{transform: "perspective(700px) rotateX(0) rotateY(0)"}}
